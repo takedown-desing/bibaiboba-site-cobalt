@@ -1,0 +1,61 @@
+---
+// Шапка: белая пилюля (как у референса) с выпадающими подразделами, жёлтая кнопка, меню на телефоне.
+import { getCollection } from 'astro:content';
+import { withBase, NAV } from '../lib/site.mjs';
+import Logo from './Logo.astro';
+interface Props { current?: string }
+const { current = '' } = Astro.props;
+const cases = (await getCollection('pages')).filter((p) => p.data.type === 'case').map((p) => [p.data.url, p.data.case?.niche || p.data.h1]);
+const nav = NAV.map((g) => ({ ...g, items: g.cases ? [...g.items, ...cases] : g.items }));
+const isActive = (g) => current !== '/' && (current.startsWith(g.href) || g.items.some(([h]) => current === h));
+---
+<header class="site-header">
+  <div class="nav-pill">
+    <a class="brand" href={withBase('/')} aria-label="На главную"><Logo size={38} /></a>
+    <nav aria-label="Основная навигация">
+      <ul class="nav-list">
+        {nav.map((g, i) => (
+          <li class="nav-dd" data-dd>
+            <a class={isActive(g) ? 'active' : ''} aria-current={current === g.href ? 'page' : undefined} href={withBase(g.href)}>{g.label}</a>
+            <button type="button" class="dd-toggle" aria-expanded="false" aria-controls={`dd-${i}`} aria-label={`Подразделы: ${g.label}`}><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+            <div class="dd-panel" id={`dd-${i}`}>
+              <ul class={g.items.length > 6 ? 'is-wide' : ''}>
+                {g.items.map(([h, l]) => <li><a class={current === h ? 'is-current' : ''} href={withBase(h)}>{l}</a></li>)}
+              </ul>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </nav>
+    <div class="header-cta">
+      <a class="btn btn-sun btn-sm" href={withBase('/brif/')}>Обсудить проект</a>
+      <button class="menu-btn" type="button" data-menu-open aria-expanded="false" aria-controls="menu-overlay">Меню</button>
+    </div>
+  </div>
+</header>
+<div class="menu-overlay" id="menu-overlay" role="dialog" aria-modal="true" aria-label="Меню сайта">
+  <div class="menu-top">
+    <a class="brand" href={withBase('/')} aria-label="На главную"><Logo size={38} tone="white" /></a>
+    <button class="menu-close" type="button" data-menu-close>Закрыть</button>
+  </div>
+  {nav.map((g) => (
+    <details class="menu-group" open={isActive(g)}>
+      <summary>{g.label}</summary>
+      <ul>{g.items.map(([h, t]) => <li><a href={withBase(h)}>{t}</a></li>)}</ul>
+    </details>
+  ))}
+  <p style="margin-top:28px"><a class="btn btn-sun" href={withBase('/audit-besplatno/')}>Бесплатный экспресс-аудит</a></p>
+</div>
+<script>
+  const ov = document.getElementById('menu-overlay');
+  const openBtn = document.querySelector('[data-menu-open]');
+  const open = () => { ov?.classList.add('is-open'); openBtn?.setAttribute('aria-expanded', 'true'); document.body.style.overflow = 'hidden'; };
+  const close = () => { ov?.classList.remove('is-open'); openBtn?.setAttribute('aria-expanded', 'false'); document.body.style.overflow = ''; (openBtn as HTMLElement)?.focus(); };
+  openBtn?.addEventListener('click', open);
+  document.querySelector('[data-menu-close]')?.addEventListener('click', close);
+  const dds = [...document.querySelectorAll('[data-dd]')];
+  const shut = (except) => dds.forEach((dd) => { if (dd !== except) { dd.classList.remove('open'); dd.querySelector('.dd-toggle')?.setAttribute('aria-expanded', 'false'); } });
+  dds.forEach((dd) => { const btn = dd.querySelector('.dd-toggle'); btn?.addEventListener('click', (e) => { e.stopPropagation(); const on = !dd.classList.contains('open'); shut(dd); dd.classList.toggle('open', on); btn.setAttribute('aria-expanded', String(on)); }); });
+  document.addEventListener('click', (e) => { if (!(e.target as Element).closest?.('[data-dd]')) shut(null); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') { shut(null); if (ov?.classList.contains('is-open')) close(); } });
+</script>

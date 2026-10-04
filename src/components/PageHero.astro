@@ -1,0 +1,40 @@
+---
+// Первый экран внутренних страниц: кобальтовая панель, шапка-пилюля, крошки, двухцветный H1, картинка страницы.
+import Header from './Header.astro';
+import TwoTone from './TwoTone.astro';
+import { withBase, AUTHORS } from '../lib/site.mjs';
+import { previewFor } from '../lib/previews.mjs';
+interface Props { d: any }
+const { d } = Astro.props;
+const cta = d.hero_cta || {};
+const person = d.type === 'person' ? (d.url === AUTHORS.valentin.url ? AUTHORS.valentin : AUTHORS.aleksey) : null;
+const pic = person ? { file: person.photo, alt: person.name } : previewFor(d.url);
+const chip = d.highlights?.[0];
+---
+<section class="hero">
+  <div class="wrap">
+    <Header current={d.url} />
+    <div class={`hero-body ${pic ? 'has-media' : ''}`}>
+      <div>
+        {d.breadcrumbs?.length > 1 && (
+          <nav class="crumbs" aria-label="Хлебные крошки"><ol>{d.breadcrumbs.map((b, i) => <li>{i < d.breadcrumbs.length - 1 ? <a href={withBase(b.url)}>{b.name}</a> : <span aria-current="page">{b.name}</span>}</li>)}</ol></nav>
+        )}
+        <TwoTone text={d.h1} tag="h1" class="h-display" />
+        {d.lede && <p class="hero-lede">{d.lede}</p>}
+        <div class="hero-ctas">
+          {cta.primary && <a class="btn btn-sun" href={withBase(cta.primary.href)}>{cta.primary.label}</a>}
+          {cta.secondary && <a class="btn btn-ghost" href={withBase(cta.secondary.href)}>{cta.secondary.label}</a>}
+        </div>
+      </div>
+      {pic && (
+        <figure class={`hero-media ${person ? 'is-portrait' : ''}`} style="margin:0">
+          <img src={withBase(pic.file)} alt={pic.alt || d.h1} width={person ? 800 : 1200} height={800} fetchpriority="high" decoding="async" />
+          {chip && !person && <div class="hero-chip"><b>{chip.value}</b><span>{chip.label}</span></div>}
+        </figure>
+      )}
+    </div>
+    {d.highlights?.length > 1 && (
+      <dl class="hero-facts" data-count={d.highlights.length}>{d.highlights.map((h) => <div class="hero-fact"><dt class="sr-only">{h.label}</dt><dd style="margin:0;display:grid;gap:4px"><b>{h.value}</b><span>{h.label}</span></dd></div>)}</dl>
+    )}
+  </div>
+</section>

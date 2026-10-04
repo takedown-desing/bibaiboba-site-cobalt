@@ -1,0 +1,21 @@
+---
+// Панель заявки внизу страниц (по референсу): двухцветный заголовок, что получите, белая форма.
+import LeadForm from './LeadForm.astro';
+import TwoTone from './TwoTone.astro';
+interface Props { title?: string }
+const { title = 'Получить бесплатный экспресс-аудит' } = Astro.props;
+---
+<section class="wrap section" aria-label="Заявка">
+  <div class="lead-panel">
+    <div>
+      <TwoTone text={title} tag="h2" class="h-section" />
+      <ul>
+        <li>Разбор сайта, профиля Авито или готовности к нейросетям</li>
+        <li>Список проблем, которые мешают получать заявки</li>
+        <li>План первых шагов по выбранному каналу</li>
+        <li>Расчёт стоимости после разбора, без тарифов из прайса</li>
+      </ul>
+    </div>
+    <LeadForm kind="audit" title="Заявка на аудит" />
+  </div>
+</section>

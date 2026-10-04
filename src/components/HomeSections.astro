@@ -1,0 +1,60 @@
+---
+// Главная по структуре референса: кто мы (портреты), каналы, кейсы мозаикой, текст главной, FAQ, заявка.
+import Faq from './Faq.astro';
+import CaseMosaic from './CaseMosaic.astro';
+import TwoTone from './TwoTone.astro';
+import { withBase, AUTHORS } from '../lib/site.mjs';
+import { previewFor } from '../lib/previews.mjs';
+interface Props { d: any }
+const { d } = Astro.props;
+const channels = d.channels || [];
+const team = [AUTHORS.aleksey, AUTHORS.valentin];
+---
+<section class="wrap section">
+  <div class="section-head"><span class="wm" aria-hidden="true">Команда</span><p class="badge-row">Знакомьтесь</p><TwoTone text={d.about_title || 'Два практика с 2018 года'} class="h-section" /></div>
+  <p class="about-text">{d.about_text || d.lede}</p>
+  <div class="founders">
+    {team.map((a) => (
+      <a class="founder" href={withBase(a.url)}>
+        <img src={withBase(a.photoSm)} alt={a.name} width="120" height="120" loading="lazy" decoding="async" />
+        <div><b>{a.name}</b><span>{a.role}, {a.since}</span></div>
+      </a>
+    ))}
+  </div>
+</section>
+
+{channels.length > 0 && (
+  <section class="wrap section" style="padding-top:0">
+    <div class="section-head"><p class="badge-row">Три канала заявок</p><TwoTone text="Поиск, нейросети и Авито" class="h-section" /></div>
+    <div class="channels">
+      {channels.map((c, i) => { const p = previewFor(c.url); return (
+        <a class="channel" href={withBase(c.url)}>
+          {p && <img src={withBase(p.file)} alt={p.alt || c.name} width="1200" height="800" loading="lazy" decoding="async" />}
+          <span class="ch-num">0{i + 1}</span>
+          <span class="ch-name">{c.name}</span>
+          <span class="ch-text">{c.text}</span>
+          {c.facts?.length > 0 && <dl>{c.facts.map((f) => <div><dt>{f.k}</dt><dd>{f.v}</dd></div>)}</dl>}
+          <span class="ch-more">Подробнее</span>
+        </a>
+      ); })}
+    </div>
+  </section>
+)}
+
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <div class="panel-soft cq" style="padding:clamp(22px,4vw,56px)">
+      <div class="section-head"><span class="wm" aria-hidden="true" style="color:#e3e8f8">Кейсы</span><p class="badge-row">Цифры из кабинета Авито</p><TwoTone text="Наши проекты" class="h-section" /></div>
+      <CaseMosaic limit={7} id="home-cases" />
+      <p style="margin:24px 0 0"><a class="btn btn-ink" href={withBase('/kejsy/')}>Все кейсы</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="wrap section" style="padding-top:0">
+  <div class="section-head"><p class="badge-row">Чем мы занимаемся</p></div>
+  <div class="flow-col">
+    <div class="prose flow"><slot /></div>
+    {d.faq?.length > 0 && <div class="sec"><Faq items={d.faq} /></div>}
+  </div>
+</section>

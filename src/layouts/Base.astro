@@ -1,0 +1,47 @@
+---
+import '../styles/cobalt.css';
+import Footer from '../components/Footer.astro';
+import { SITE, absUrl, withBase } from '../lib/site.mjs';
+import { buildGraph } from '../lib/schema.mjs';
+import { previewFor } from '../lib/previews.mjs';
+interface Props { d: any; home?: boolean }
+const { d, home = false } = Astro.props;
+const graph = buildGraph(d);
+const ogPrev = previewFor(d.url);
+const ogImage = ogPrev?.own ? absUrl(ogPrev.file.replace(/\.webp$/, '.jpg')) : absUrl('/og.png');
+const ogSize = ogPrev?.own ? [1200, 800] : [1200, 630];
+---
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>{d.title}</title>
+    <meta name="description" content={d.description} />
+    <link rel="canonical" href={absUrl(d.url)} />
+    {SITE.preview && <meta name="robots" content="noindex, nofollow" />}
+    <meta property="og:type" content={d.type === 'case' ? 'article' : 'website'} />
+    <meta property="og:locale" content="ru_RU" />
+    <meta property="og:site_name" content={SITE.name} />
+    <meta property="og:title" content={d.og_title || d.title} />
+    <meta property="og:description" content={d.og_description || d.description} />
+    <meta property="og:url" content={absUrl(d.url)} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content={String(ogSize[0])} />
+    <meta property="og:image:height" content={String(ogSize[1])} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#2340d8" />
+    <link rel="icon" href={withBase('/favicon.svg')} type="image/svg+xml" />
+    <link rel="apple-touch-icon" href={withBase('/apple-touch-icon.png')} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Unbounded:wght@500;700&display=swap" />
+    <script type="application/ld+json" set:html={JSON.stringify(graph)} />
+  </head>
+  <body class={home ? 'page-home' : ''}>
+    <a class="skip-link" href="#main">К содержанию</a>
+    <slot name="hero" />
+    <main id="main"><slot /></main>
+    <Footer />
+  </body>
+</html>

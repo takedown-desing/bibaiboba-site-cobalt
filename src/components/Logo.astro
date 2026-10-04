@@ -1,0 +1,12 @@
+---
+// Знак агентства без названия: облачко-заявка со спутником. Тон ink (тёмно-синий) или white, спутник жёлтый.
+interface Props { size?: number; class?: string; tone?: 'ink' | 'white' }
+const { size = 38, class: cls = '', tone = 'ink' } = Astro.props;
+const id = 'bbm-' + Math.random().toString(36).slice(2, 9);
+const body = tone === 'white' ? '#ffffff' : '#0e1538';
+---
+<svg class={cls} width={size} height={size} viewBox="2 4 42 42" aria-hidden="true" focusable="false">
+  <defs><mask id={id} maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48"><rect width="48" height="48" fill="#fff" /><circle cx="34" cy="14" r="11" fill="#000" /></mask></defs>
+  <g mask={`url(#${id})`} fill={body}><circle cx="21" cy="27" r="17" /><path d="M6 32 L4 45 L15 41 Z" /></g>
+  <circle cx="34" cy="14" r="7" fill="#ffc93c" />
+</svg>

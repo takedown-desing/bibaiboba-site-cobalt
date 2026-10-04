@@ -1,0 +1,11 @@
+---
+// Двухцветный заголовок как у референса: последние слова приглушённым тоном.
+interface Props { text: string; tag?: string; class?: string; indent?: boolean }
+const { text = '', tag = 'h2', class: cls = '', indent = false } = Astro.props;
+const words = String(text).trim().split(/\s+/);
+const k = words.length >= 6 ? 2 : words.length >= 2 ? 1 : 0;
+const head = words.slice(0, words.length - k).join(' ');
+const tail = words.slice(words.length - k).join(' ');
+const Tag = tag;
+---
+<Tag class={cls}>{head}{tail && (indent ? <span class="indent mute">{tail}</span> : <> <span class="mute">{tail}</span></>)}</Tag>

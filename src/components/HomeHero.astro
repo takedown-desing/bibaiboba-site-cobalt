@@ -1,0 +1,35 @@
+---
+// Первый экран главной: крупный двухцветный заголовок со сдвигом второй строки, пункты-каналы, картинка.
+import Header from './Header.astro';
+import TwoTone from './TwoTone.astro';
+import { withBase } from '../lib/site.mjs';
+import { previewFor } from '../lib/previews.mjs';
+interface Props { d: any }
+const { d } = Astro.props;
+const pic = previewFor('/');
+const cta = d.hero_cta || {};
+---
+<section class="hero hero-home">
+  <div class="wrap">
+    <Header current="/" />
+    <div class="hero-body has-media">
+      <div>
+        <TwoTone text={d.h1} tag="h1" class="h-display" indent />
+        {d.lede && <p class="hero-lede">{d.lede}</p>}
+        {d.channels?.length > 0 && (
+          <ul class="hero-bullets">{d.channels.map((c) => <li><a href={withBase(c.url)}>{c.name}</a>: {c.text}</li>)}</ul>
+        )}
+        <div class="hero-ctas">
+          <a class="btn btn-sun" href={withBase(cta.primary?.href || '/audit-besplatno/')}>{cta.primary?.label || 'Получить бесплатный аудит'}</a>
+          <a class="btn btn-ghost" href={withBase('/kejsy/')}>Смотреть кейсы</a>
+        </div>
+      </div>
+      {pic && (
+        <figure class="hero-media" style="margin:0">
+          <img src={withBase(pic.file)} alt={pic.alt || 'Три канала заявок'} width="1200" height="800" fetchpriority="high" decoding="async" />
+          <div class="hero-chip"><b>с 2018</b><span>два практика: поиск и сайты, Авито</span></div>
+        </figure>
+      )}
+    </div>
+  </div>
+</section>
