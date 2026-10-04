@@ -427,3 +427,26 @@ a { color: inherit; }
 .section, .content-area { overflow-x: clip; }
 .wm { max-width: 100%; overflow: hidden; }
 @media (max-width: 640px) { .wm { font-size: 64px; } }
+
+/* Прямые контакты */
+.contact-links { display: grid; gap: 14px; container-type: inline-size; }
+@media (min-width: 900px) { .contact-links:not(.is-single) { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.cl-person { background: var(--soft); border-radius: var(--r-xl); padding: 24px; display: grid; gap: 16px; align-content: start; }
+.cl-head { display: flex; align-items: center; gap: 14px; }
+.cl-head img { width: 56px; height: 56px; border-radius: 50%; object-fit: cover; }
+.cl-head b { display: block; font: 800 20px/1.2 var(--sans); letter-spacing: -.02em; }
+.cl-head span { font-size: 14px; color: var(--ink-2); }
+.cl-person ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+@container (min-width: 520px) { .is-single .cl-person ul { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.cl-link { display: flex; align-items: center; gap: 12px; padding: 10px 14px 10px 10px; border-radius: var(--r-md); background: #fff; text-decoration: none; color: var(--ink); transition: transform .3s var(--ease), box-shadow .3s; min-width: 0; }
+.cl-link:hover { transform: translateY(-2px); box-shadow: 0 16px 30px -22px rgba(14,21,56,.6); }
+.cl-icon { flex: none; width: 42px; height: 42px; border-radius: 50%; display: grid; place-items: center; color: #fff; background: var(--cobalt); }
+.cl-icon svg { width: 20px; height: 20px; }
+.cl-linkedin .cl-icon { background: var(--navy); }
+.cl-github .cl-icon { background: var(--navy-2); }
+.cl-mail .cl-icon { background: var(--sun); color: var(--navy); }
+.cl-dzen .cl-icon { background: var(--mint); color: var(--navy); }
+.cl-text { display: grid; min-width: 0; }
+.cl-label { font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-2); }
+.cl-handle { font-size: 15px; font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.cl-mail .cl-handle { white-space: normal; overflow-wrap: anywhere; text-overflow: clip; }
