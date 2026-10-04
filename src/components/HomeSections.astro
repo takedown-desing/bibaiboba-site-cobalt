@@ -1,6 +1,7 @@
 ---
 // Главная по структуре референса: кто мы (портреты), каналы, кейсы мозаикой, текст главной, FAQ, заявка.
 import Faq from './Faq.astro';
+import QuizCalc from './QuizCalc.astro';
 import CaseMosaic from './CaseMosaic.astro';
 import TwoTone from './TwoTone.astro';
 import { withBase, AUTHORS } from '../lib/site.mjs';
@@ -39,6 +40,8 @@ const team = [AUTHORS.aleksey, AUTHORS.valentin];
     </div>
   </section>
 )}
+
+<section class="wrap section" style="padding-top:0"><QuizCalc /></section>
 
 <section class="section" style="padding-top:0">
   <div class="wrap">
