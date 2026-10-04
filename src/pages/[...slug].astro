@@ -35,7 +35,7 @@ const hd = d.type === 'case' && d.case && !d.highlights?.length ? { ...d, highli
   {d.type === 'home' ? <HomeSections d={d}><Content /></HomeSections> : (<>
     {allCases.length > 0 && (
       <section class="wrap section" aria-label="Кейсы" style="padding-bottom:0">
-        <div class="section-head"><span class="wm" aria-hidden="true">Кейсы</span><p class="badge-row">Разделы</p><h2 class="h-section">Выберите нишу</h2></div>
+        <div class="section-head"><span class="wm" aria-hidden="true">Кейсы</span><h2 class="h-section">Выберите нишу</h2></div>
         <div class="cq"><CaseMosaic /></div>
       </section>
     )}

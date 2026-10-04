@@ -11,7 +11,7 @@ const channels = d.channels || [];
 const team = [AUTHORS.aleksey, AUTHORS.valentin];
 ---
 <section class="wrap section">
-  <div class="section-head"><span class="wm" aria-hidden="true">Команда</span><p class="badge-row">Знакомьтесь</p><TwoTone text={d.about_title || 'Два практика с 2018 года'} class="h-section" /></div>
+  <div class="section-head"><span class="wm" aria-hidden="true">Команда</span><TwoTone text={d.about_title || 'Два практика с 2018 года'} class="h-section" /></div>
   <p class="about-text">{d.about_text || d.lede}</p>
   <div class="founders">
     {team.map((a) => (
@@ -25,12 +25,11 @@ const team = [AUTHORS.aleksey, AUTHORS.valentin];
 
 {channels.length > 0 && (
   <section class="wrap section" style="padding-top:0">
-    <div class="section-head"><p class="badge-row">Три канала заявок</p><TwoTone text="Поиск, нейросети и Авито" class="h-section" /></div>
+    <div class="section-head"><TwoTone text="Поиск, нейросети и Авито" class="h-section" /></div>
     <div class="channels">
       {channels.map((c, i) => { const p = previewFor(c.url); return (
         <a class="channel" href={withBase(c.url)}>
           {p && <img src={withBase(p.file)} alt={p.alt || c.name} width="1200" height="800" loading="lazy" decoding="async" />}
-          <span class="ch-num">0{i + 1}</span>
           <span class="ch-name">{c.name}</span>
           <span class="ch-text">{c.text}</span>
           {c.facts?.length > 0 && <dl>{c.facts.map((f) => <div><dt>{f.k}</dt><dd>{f.v}</dd></div>)}</dl>}
@@ -44,7 +43,7 @@ const team = [AUTHORS.aleksey, AUTHORS.valentin];
 <section class="section" style="padding-top:0">
   <div class="wrap">
     <div class="panel-soft cq" style="padding:clamp(22px,4vw,56px)">
-      <div class="section-head"><span class="wm" aria-hidden="true" style="color:#e3e8f8">Кейсы</span><p class="badge-row">Цифры из кабинета Авито</p><TwoTone text="Наши проекты" class="h-section" /></div>
+      <div class="section-head"><span class="wm" aria-hidden="true" style="color:#e3e8f8">Кейсы</span><TwoTone text="Наши проекты" class="h-section" /></div>
       <CaseMosaic limit={7} id="home-cases" />
       <p style="margin:24px 0 0"><a class="btn btn-ink" href={withBase('/kejsy/')}>Все кейсы</a></p>
     </div>
@@ -52,7 +51,7 @@ const team = [AUTHORS.aleksey, AUTHORS.valentin];
 </section>
 
 <section class="wrap section" style="padding-top:0">
-  <div class="section-head"><p class="badge-row">Чем мы занимаемся</p></div>
+  <div class="section-head"></div>
   <div class="flow-col">
     <div class="prose flow"><slot /></div>
     {d.faq?.length > 0 && <div class="sec"><Faq items={d.faq} /></div>}
