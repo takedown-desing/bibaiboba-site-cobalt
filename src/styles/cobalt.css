@@ -521,3 +521,4 @@ a { color: inherit; }
 .quiz-submit { background: var(--sun); color: var(--navy); } .quiz-submit:hover { background: var(--sun-2); }
 .quiz-status { color: var(--cobalt); }
 .quiz-back, .quiz-restart { border: 1px solid rgba(255,255,255,.35); color: #fff; }
+.sec .section-title, #rel-title { font: 800 clamp(24px, 2.8vw, 36px)/1.12 var(--sans) !important; letter-spacing: -.025em; margin: 0 0 18px; text-transform: none; }

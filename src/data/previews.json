@@ -3,300 +3,350 @@
   "file": "/img/preview/audit-besplatno.webp",
   "width": 1200,
   "height": 800,
-  "alt": "Открытая подарочная коробка с лупой внутри"
+  "alt": "Подарочная коробка раскрывается в отчёт",
+  "series": "cobalt"
  },
  "audit-sajta-tehnicheskij": {
   "file": "/img/preview/audit-sajta-tehnicheskij.webp",
   "width": 1200,
   "height": 800,
-  "alt": "Стетоскоп на корпусе сервера, рядом шкала диагностики"
+  "alt": "Робот-обходчик идёт по страницам, статусы отмечены цветом",
+  "series": "cobalt"
  },
  "audit-sajta-yuzabiliti": {
   "file": "/img/preview/audit-sajta-yuzabiliti.webp",
   "width": 1200,
   "height": 800,
-  "alt": "Путь курсора пунктиром по макету страницы"
+  "alt": "Путь курсора и тепловая карта по макету страницы",
+  "series": "cobalt"
  },
  "audit-sajta": {
   "file": "/img/preview/audit-sajta.webp",
   "width": 1200,
   "height": 800,
-  "alt": "Планшет с чек-листом, лупа и страница сайта"
+  "alt": "Панель аудита с оценкой и списком проблем",
+  "series": "cobalt"
  },
  "avito-konsultaciya": {
   "file": "/img/preview/avito-konsultaciya.webp",
   "width": 1200,
   "height": 800,
-  "alt": "Два кресла друг напротив друга и смартфон на столике"
+  "alt": "Разбор аккаунта и план из трёх шагов",
+  "series": "cobalt"
  },
  "avitolog": {
   "file": "/img/preview/avitolog.webp",
   "width": 1200,
   "height": 800,
-  "alt": "Смартфон с сеткой объявлений и рупор"
+  "alt": "Смартфон с объявлениями и аналитикой",
+  "series": "cobalt"
  },
  "brif": {
   "file": "/img/preview/brif.webp",
   "width": 1200,
   "height": 800,
-  "alt": "Планшет с анкетой и карандаш"
+  "alt": "Анкета превращается в план работ",
+  "series": "cobalt"
  },
  "dorabotka-sajta": {
   "file": "/img/preview/dorabotka-sajta.webp",
   "width": 1200,
   "height": 800,
-  "alt": "Инструменты чинят треснувшую карточку сайта"
+  "alt": "Точки исправления на макете и список задач",
+  "series": "cobalt"
  },
  "geo-audit": {
   "file": "/img/preview/geo-audit.webp",
   "width": 1200,
   "height": 800,
-  "alt": "Лупа изучает сферу нейросети"
+  "alt": "Проверка сайта на готовность к нейросетям",
+  "series": "cobalt"
  },
  "geo-prodvizhenie-v-nejrosetyah": {
   "file": "/img/preview/geo-prodvizhenie-v-nejrosetyah.webp",
   "width": 1200,
   "height": 800,
-  "alt": "Облачко ответа выходит из нейросети и несёт карточку сайта"
+  "alt": "Несколько чат-ассистентов ссылаются на один сайт",
+  "series": "cobalt"
  },
  "geo": {
   "file": "/img/preview/geo.webp",
   "width": 1200,
   "height": 800,
-  "alt": "Сфера нейросети, связанная нитями света с карточкой сайта"
+  "alt": "Ответ нейросети опирается на карточку сайта",
+  "series": "cobalt"
  },
  "home": {
   "file": "/img/preview/home.webp",
   "width": 1200,
   "height": 800,
-  "alt": "Облачко сообщения со спутником: три канала заявок"
+  "alt": "Три канала заявок сходятся в одну воронку",
+  "series": "cobalt"
  },
  "kejsy-avito-almaznaya-rezka-betona": {
   "file": "/img/preview/kejsy-avito-almaznaya-rezka-betona.webp",
   "width": 1200,
   "height": 800,
-  "alt": "Алмазная коронка вырезает круглое отверстие в бетоне"
+  "alt": "Бетонный блок с коронкой и веер объявлений",
+  "series": "cobalt"
  },
  "kejsy-avito-elektrika-pod-klyuch": {
   "file": "/img/preview/kejsy-avito-elektrika-pod-klyuch.webp",
   "width": 1200,
   "height": 800,
-  "alt": "Аккуратный электрощит и катушка кабеля"
+  "alt": "Электрощит и рост контактов в два раза",
+  "series": "cobalt"
  },
  "kejsy-avito-geodezist": {
   "file": "/img/preview/kejsy-avito-geodezist.webp",
   "width": 1200,
   "height": 800,
-  "alt": "Тахеометр на штативе в поле у небольшого города"
+  "alt": "Тахеометр, небольшой город и неделя до результата",
+  "series": "cobalt"
  },
  "kejsy-avito-mebel-na-zakaz": {
   "file": "/img/preview/kejsy-avito-mebel-na-zakaz.webp",
   "width": 1200,
   "height": 800,
-  "alt": "Деревянный шкаф на заказ в шоуруме"
+  "alt": "Шкаф на заказ и точный поиск по объявлениям",
+  "series": "cobalt"
  },
  "kejsy-avito-mini-krany": {
   "file": "/img/preview/kejsy-avito-mini-krany.webp",
   "width": 1200,
   "height": 800,
-  "alt": "Компактный мини-кран поднимает блок"
+  "alt": "Мини-кран, два аккаунта и карточки-инфографика",
+  "series": "cobalt"
  },
  "kejsy-avito-prodazha-shin-sklad": {
   "file": "/img/preview/kejsy-avito-prodazha-shin-sklad.webp",
   "width": 1200,
   "height": 800,
-  "alt": "Стеллажи склада, заполненные шинами"
+  "alt": "Склад шин и ежедневный выпуск объявлений",
+  "series": "cobalt"
  },
  "kejsy-avito-remont-kvartir-20-gorodov": {
   "file": "/img/preview/kejsy-avito-remont-kvartir-20-gorodov.webp",
   "width": 1200,
   "height": 800,
-  "alt": "Валик и инструменты на плане квартиры с метками"
+  "alt": "План квартиры, валик и метки городов",
+  "series": "cobalt"
  },
  "kejsy-avito-remont-stiralnyh-mashin-70-gorodov": {
   "file": "/img/preview/kejsy-avito-remont-stiralnyh-mashin-70-gorodov.webp",
   "width": 1200,
   "height": 800,
-  "alt": "Стиральная машина на фоне карты с множеством меток"
+  "alt": "Стиральная машина и карта с десятками меток",
+  "series": "cobalt"
  },
  "kejsy-avito-sertifikaciya-dlya-marketplejsov": {
   "file": "/img/preview/kejsy-avito-sertifikaciya-dlya-marketplejsov.webp",
   "width": 1200,
   "height": 800,
-  "alt": "Коробки товаров с крупной печатью сертификата"
+  "alt": "Коробка с печатью сертификата и три аккаунта",
+  "series": "cobalt"
  },
  "kejsy-avito-vskrytie-zamkov-35-gorodov": {
   "file": "/img/preview/kejsy-avito-vskrytie-zamkov-35-gorodov.webp",
   "width": 1200,
   "height": 800,
-  "alt": "Дверной замок и ключ на фоне созвездия точек"
+  "alt": "Замок в центре сети городов",
+  "series": "cobalt"
  },
  "kejsy-avito-vskrytie-zamkov-konkurentnyj-gorod": {
   "file": "/img/preview/kejsy-avito-vskrytie-zamkov-konkurentnyj-gorod.webp",
   "width": 1200,
   "height": 800,
-  "alt": "Ключ в замке среди множества закрытых дверей"
+  "alt": "Одна выделенная дверь среди множества конкурентов",
+  "series": "cobalt"
  },
  "kejsy-avito-vykup-shin-i-diskov": {
   "file": "/img/preview/kejsy-avito-vykup-shin-i-diskov.webp",
   "width": 1200,
   "height": 800,
-  "alt": "Стопка шин и литые диски"
+  "alt": "Шины, диски и обмен на деньги",
+  "series": "cobalt"
  },
  "kejsy": {
   "file": "/img/preview/kejsy.webp",
   "width": 1200,
   "height": 800,
-  "alt": "Полка с предметами разных профессий"
+  "alt": "Сетка проектов из разных ниш с ростом",
+  "series": "cobalt"
  },
  "kontakty": {
   "file": "/img/preview/kontakty.webp",
   "width": 1200,
   "height": 800,
-  "alt": "Бумажный самолётик вылетает из облачка сообщения"
+  "alt": "Бумажный самолётик вылетает из чата",
+  "series": "cobalt"
  },
  "kontent-dlya-sajta": {
   "file": "/img/preview/kontent-dlya-sajta.webp",
   "width": 1200,
   "height": 800,
-  "alt": "Перьевая ручка рисует линию, которая превращается в блоки текста"
+  "alt": "Структура текста страницы: заголовки, абзацы, таблица, вопросы",
+  "series": "cobalt"
  },
  "o-nas-aleksey-borovikov": {
   "file": "/img/preview/o-nas-aleksey-borovikov.webp",
   "width": 1200,
   "height": 800,
-  "alt": "Рабочий стол: ноутбук с графиками поиска и сфера нейросети"
+  "alt": "Поиск, нейросети и сайты вокруг рабочего ноутбука",
+  "series": "cobalt"
  },
  "o-nas-valentin-baranov": {
   "file": "/img/preview/o-nas-valentin-baranov.webp",
   "width": 1200,
   "height": 800,
-  "alt": "Смартфон с карточками объявлений и блокнот с графиком роста"
+  "alt": "Объявления, аналитика и рост вокруг смартфона",
+  "series": "cobalt"
  },
  "o-nas": {
   "file": "/img/preview/o-nas.webp",
   "width": 1200,
   "height": 800,
-  "alt": "Большая и малая сферы на подиуме, как планета и спутник"
+  "alt": "Два круга, связанные с тремя каналами",
+  "series": "cobalt"
  },
  "podderzhka-sajta": {
   "file": "/img/preview/podderzhka-sajta.webp",
   "width": 1200,
   "height": 800,
-  "alt": "Щит и спасательный круг вокруг карточки сайта"
+  "alt": "Мониторинг: доступность, защита, резервные копии",
+  "series": "cobalt"
  },
  "prodvizhenie-na-avito": {
   "file": "/img/preview/prodvizhenie-na-avito.webp",
   "width": 1200,
   "height": 800,
-  "alt": "Карточки объявлений поднимаются из смартфона как график роста"
+  "alt": "Воронка: объявления, просмотры, контакты",
+  "series": "cobalt"
  },
  "prototip-sajta": {
   "file": "/img/preview/prototip-sajta.webp",
   "width": 1200,
   "height": 800,
-  "alt": "Эскизы страниц на бумаге, карандаш и линейка"
+  "alt": "Схема экранов и переходов между ними",
+  "series": "cobalt"
  },
  "redizajn-sajta": {
   "file": "/img/preview/redizajn-sajta.webp",
   "width": 1200,
   "height": 800,
-  "alt": "Старый монитор превращается в современный экран"
+  "alt": "Было и стало: устаревшая страница и новая",
+  "series": "cobalt"
  },
  "seo-google": {
   "file": "/img/preview/seo-google.webp",
   "width": 1200,
   "height": 800,
-  "alt": "Маяк освещает парящие страницы сайта"
+  "alt": "Строка поиска разворачивается в результаты и графики",
+  "series": "cobalt"
  },
  "seo-internet-magazin": {
   "file": "/img/preview/seo-internet-magazin.webp",
   "width": 1200,
   "height": 800,
-  "alt": "Пакет покупок и коробки на полках-столбиках графика"
+  "alt": "Дерево каталога магазина с карточками товаров",
+  "series": "cobalt"
  },
  "seo-novyj-sajt": {
   "file": "/img/preview/seo-novyj-sajt.webp",
   "width": 1200,
   "height": 800,
-  "alt": "Росток растёт из карточки нового сайта"
+  "alt": "Временная шкала запуска нового сайта",
+  "series": "cobalt"
  },
  "seo-optimizaciya": {
   "file": "/img/preview/seo-optimizaciya.webp",
   "width": 1200,
   "height": 800,
-  "alt": "Точные инструменты вокруг макета страницы сайта"
+  "alt": "Схема страницы с отмеченными точками оптимизации",
+  "series": "cobalt"
  },
  "seo-regiony": {
   "file": "/img/preview/seo-regiony.webp",
   "width": 1200,
   "height": 800,
-  "alt": "Рельефная карта из плиток с метками, соединёнными линиями"
+  "alt": "Карта регионов из шестиугольников с метками и графиками",
+  "series": "cobalt"
  },
  "seo-sajt-uslug": {
   "file": "/img/preview/seo-sajt-uslug.webp",
   "width": 1200,
   "height": 800,
-  "alt": "Ящик с инструментами и звонок обслуживания рядом с карточкой сайта"
+  "alt": "Путь клиента от поиска до звонка",
+  "series": "cobalt"
  },
  "seo-specialist": {
   "file": "/img/preview/seo-specialist.webp",
   "width": 1200,
   "height": 800,
-  "alt": "Рабочее место специалиста: лампа, ноутбук с графиками, блокнот"
+  "alt": "Один специалист в центре всех задач",
+  "series": "cobalt"
  },
  "seo-yandex": {
   "file": "/img/preview/seo-yandex.webp",
   "width": 1200,
   "height": 800,
-  "alt": "Компас со стрелкой вверх над стопкой страниц"
+  "alt": "Компас и лестница результатов поиска с ростом",
+  "series": "cobalt"
  },
  "seo": {
   "file": "/img/preview/seo.webp",
   "width": 1200,
   "height": 800,
-  "alt": "Лупа над стопкой страниц сайта, одна страница поднимается вверх"
+  "alt": "Список результатов поиска, одна карточка поднимается на первое место",
+  "series": "cobalt"
  },
  "sozdanie-sajtov-dlya-malogo-biznesa": {
   "file": "/img/preview/sozdanie-sajtov-dlya-malogo-biznesa.webp",
   "width": 1200,
   "height": 800,
-  "alt": "Маленькая витрина магазина, окно которой стало сайтом"
+  "alt": "Небольшой бизнес в центре: сайт, карта, телефон, чат",
+  "series": "cobalt"
  },
  "sozdanie-sajtov-korporativnyj-sajt": {
   "file": "/img/preview/sozdanie-sajtov-korporativnyj-sajt.webp",
   "width": 1200,
   "height": 800,
-  "alt": "Современное здание из страниц сайта"
+  "alt": "Карта корпоративного сайта: дерево разделов",
+  "series": "cobalt"
  },
  "sozdanie-sajtov-lending": {
   "file": "/img/preview/sozdanie-sajtov-lending.webp",
   "width": 1200,
   "height": 800,
-  "alt": "Длинная страница разворачивается как свиток"
+  "alt": "Одна длинная страница ведёт к кнопке заявки",
+  "series": "cobalt"
  },
  "sozdanie-sajtov-na-nejrosetyah": {
   "file": "/img/preview/sozdanie-sajtov-na-nejrosetyah.webp",
   "width": 1200,
   "height": 800,
-  "alt": "Манипуляторы собирают страницу сайта из светящихся блоков"
+  "alt": "Нейросеть собирает блоки страницы, на выходе проверка",
+  "series": "cobalt"
  },
  "sozdanie-sajtov-s-prodvizheniem": {
   "file": "/img/preview/sozdanie-sajtov-s-prodvizheniem.webp",
   "width": 1200,
   "height": 800,
-  "alt": "Карточка сайта взлетает на ракете"
+  "alt": "Две шестерёнки: сайт и рост заявок",
+  "series": "cobalt"
  },
  "sozdanie-sajtov-sajt-vizitka": {
   "file": "/img/preview/sozdanie-sajtov-sajt-vizitka.webp",
   "width": 1200,
   "height": 800,
-  "alt": "Визитка раскрывается в маленький сайт из трёх страниц"
+  "alt": "Визитка раскрывается в маленький сайт",
+  "series": "cobalt"
  },
  "sozdanie-sajtov": {
   "file": "/img/preview/sozdanie-sajtov.webp",
   "width": 1200,
   "height": 800,
-  "alt": "Строительные блоки собираются в макет сайта"
+  "alt": "Сайт собирается из блоков по четырём этапам",
+  "series": "cobalt"
  }
 }
